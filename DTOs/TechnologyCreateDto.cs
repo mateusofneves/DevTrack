@@ -1,18 +1,12 @@
-﻿namespace DevTrack.Models;
+﻿namespace DevTrack.DTOs;
 
-public class Technology
+public class TechnologyCreateDto
 {
-    public int Id { get; set; }
-
     public string Name { get; set; } = string.Empty;
 
     public string Category { get; set; } = string.Empty;
 
     public string LearningStatus { get; set; } = "Learning";
 
-    public DateTime StartedAt { get; set; } = DateTime.UtcNow;
-
     public int UserId { get; set; }
-
-    public User User { get; set; } = null!;
 }

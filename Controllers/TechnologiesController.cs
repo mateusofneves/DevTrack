@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using DevTrack.Models;
+﻿using DevTrack.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DevTrack.Controllers;
 
@@ -7,11 +7,18 @@ namespace DevTrack.Controllers;
 [Route("api/[controller]")]
 public class TechnologiesController : ControllerBase
 {
-    private static readonly List<Technology> technologies = new();
+    private readonly ITechnologyService _service;
+
+    public TechnologiesController(ITechnologyService technologyService)
+    {
+        _service = technologyService;
+    }
 
     [HttpGet]
-    public IActionResult Get()
+    public async Task<IActionResult> GetAll()
     {
+        var technologies = await _service.GetAllAsync();
+
         return Ok(technologies);
     }
 }
