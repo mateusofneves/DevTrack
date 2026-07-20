@@ -15,9 +15,9 @@ Criar uma aplicação completa utilizando o ecossistema .NET para praticar conce
 ## Roadmap
 
 - [x] Estrutura inicial
+- [x] PostgreSQL
+- [x] Entity Framework Core
 - [ ] CRUD de Tecnologias
-- [ ] Entity Framework Core
-- [ ] PostgreSQL
 - [ ] CRUD de Cursos
 - [ ] CRUD de Projetos
 - [ ] Dashboard
